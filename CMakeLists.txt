@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.14)
+project(HW6)
+find_package(OpenMP)
+set(CMAKE_CXX_STANDARD 14)
+add_executable(HW6 main.cpp)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(HW6 PUBLIC OpenMP::OpenMP_CXX)
+endif()
